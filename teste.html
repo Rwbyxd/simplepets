@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="icon" href="https://i.imgur.com/SJ65bjr.png" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Pets</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+@font-face {
+    font-family: 'Valentine Cute';
+    src: url('Valentine Cute.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #343a40;
+    line-height: 1.6;
+    position: relative;
+    overflow-x: hidden; 
+}
+
+.card { 
+    border: none; 
+    margin: 15px 0; 
+    min-height: 300px; 
+}
+
+header {
+    background: linear-gradient(90deg, #ffffff, #ffffff);
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+    position: relative;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header img.logo-left {
+    height: 80px;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+header .header-icons {
+    position: absolute;
+    top: 20px; /* Muda a posição para o topo */
+    right: 20px; /* Ajusta a posição para a direita */
+    display: flex;
+    align-items: center;
+}
+
+header .header-icons a {
+    margin-left: 10px;
+}
+
+header .header-icons img {
+    height: 40px;
+    cursor: pointer;
+}
+
+h1 {
+    font-family: 'Valentine Cute', sans-serif;
+    font-size: 3rem;
+    letter-spacing: 2px;
+    color: rgb(88, 205, 232);
+    margin: 0;
+}
+
+/* Ajustes apenas para dispositivos móveis */
+@media (max-width: 768px) {
+    /* Header */
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 10px;
+    }
+
+    header img.logo-left {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        transform: none;
+    }
+
+    header h1 {
+        margin-top: 80px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    /* Mover os ícones para a parte superior direita */
+    header .header-icons {
+        position: absolute;
+        top: 20px; /* Ajusta a posição para o topo */
+        right: 20px; /* Ajusta a posição para a direita */
+    }
+}
+
+nav {
+    background: #343a40;
+    color: white;
+    z-index: 10;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+}
+
+nav ul li:hover > ul {
+    display: block;
+}
+
+nav ul ul {
+    background: #444444;
+    padding: 0;
+}
+
+nav ul ul a {
+    padding: 10px 20px;
+    display: block;
+}
+
+main {
+    padding: 40px 20px;
+    flex: 1;
+    z-index: 5;
+    position: relative;
+}
+
+main p, main h2 {
+    color: white;
+}
+
+footer {
+    background:  #343a40;
+    color: #626262;
+    text-align: center;
+    padding: 20px;
+    z-index: 10;
+    position: relative;
+}
+
+.carousel-item img {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    filter: brightness(50%);
+}
+
+.carousel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+    </style>
+    
+    
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <img src="https://i.imgur.com/emQH1wN.png" alt="Logo Simple Pets" class="logo-left">
+        </a>
+        <h1>Simple Pets</h1>
+        <div class="header-icons">
+            <a href="https://www.instagram.com/simple.pets_/" target="_blank">
+                <img src="https://i.imgur.com/veiubKa.png" alt="Instagram Simple Pets">
+            </a>
+            <a href="mailto:simplepetss@gmail.com" target="_blank">
+                <img src="https://i.imgur.com/QQxGsLS.png" alt="Email Simple Pets">
+            </a>
+        </div>
+        
+    </header>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Bem-estar</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="depressão.html">Depressão em Pets</a></li>
+                            <li><a class="dropdown-item" href="ansiedade.html">Ansiedade em Pets</a></li>
+                            <li><a class="dropdown-item" href="5liberdades.html">5 Liberdades</a></li>
+                            <li><a class="dropdown-item" href="gravidez_psicologica.html">Gravidez Psicológica</a></li>
+                            <li><a class="dropdown-item" href="giardia.html">Giárdia</a></li>
+                            <li><a class="dropdown-item" href="sarna.html">Sarna</a></li>
+                            <li><a class="dropdown-item" href="comportamento_animal.html">Comportamento Animal</a></li>
+                            <li><a class="dropdown-item" href="castração.html">Castração em Pets</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Cão</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="cinomose.html">Cinomose</a></li>
+                            <li><a class="dropdown-item" href="carrapato.html">Doença do Carrapato</a></li>
+                            <li><a class="dropdown-item" href="parvovirose.html">Parvovirose</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Gato</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="fiv.html">FIV</a></li>
+                            <li><a class="dropdown-item" href="felv.html">FeLV</a></li>
+                            <li><a class="dropdown-item" href="Clamidiose.html">Clamidiose</a></li>
+                        
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="container">
+        <div class="text-center mb-5">
+            <h2 class="mb-3">Bem-vindo ao Simple Pets!</h2>
+            <p style="color: white;">Seja o tutor que seu pet pensa que você é</p>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card p-4 shadow-sm">
+                    <h4>Sobre nós</h4>
+                    <p style="color:black;">O guia completo de saúde e bem-estar para cães e gatos, feito por quem ama animais como você. 
+                        Somos estudantes de Medicina Veterinária apaixonados pelo cuidado e pela saúde dos animais. Criamos o Simple Pets para compartilhar informações seguras, acessíveis e baseadas em estudos científicos, ajudando tutores a oferecerem a melhor qualidade de vida aos seus companheiros de quatro patas.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card p-4 shadow-sm">
+                    <h4>Nossa Visão</h4>
+                    <p style="color:black;">Educar: Compartilhar conhecimento acessível para que os tutores possam tomar decisões informadas.
+                        Apoiar: Oferecer um espaço seguro onde dúvidas são bem-vindas e respondidas com embasamento técnico.
+                        Inspirar: Criar uma comunidade engajada em promover o cuidado responsável e o amor pelos animais. 
+                        </p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 site da xuxu. Todos os direitos reservados a Ana Clara Bertola.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Carrossel -->
+<div id="backgroundCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="10000">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="https://i.imgur.com/fsTjKUr.jpeg" class="d-block w-100" alt="Imagem 1">
+        </div>
+        <div class="carousel-item">
+            <img src="https://i.imgur.com/yXhGvLe.jpeg" class="d-block w-100" alt="Imagem 2">
+        </div>
+        <div class="carousel-item">
+            <img src="https://i.imgur.com/qMbToPH.jpeg" class="d-block w-100" alt="Imagem 3">
+        </div>
+        <div class="carousel-item">
+            <img src="https://i.imgur.com/BRlcEtg.jpeg" class="d-block w-100" alt="Imagem 4">
+        </div>
+        <div class="carousel-item">
+            <img src="https://i.imgur.com/nIRx0Fq.jpeg" class="d-block w-100" alt="Imagem 5">
+        </div>
+    </div>
+    <!-- Controles do Carrossel -->
+    <a class="carousel-control-prev" href="#backgroundCarousel" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#backgroundCarousel" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </a>
+</div>
